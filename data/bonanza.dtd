@@ -34,7 +34,7 @@ Burger customization...
 >
 
 <!-- The customer can order two cheeses. Let's assume that one might go on top
-and one on bottom, and provide for unique codes for these. -->
+and one on bottom, and provide for unique codes for these-.  -->
 <!ELEMENT cheeses EMPTY>
 <!ATTLIST cheeses
     top (american|swiss|jack|blue|gruyere|gouda|aged|goat|brie) #IMPLIED
