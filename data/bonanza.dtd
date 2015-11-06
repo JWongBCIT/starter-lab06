@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- An order identifies the customer, order type, burgers, and anything special  -->
-<!ELEMENT order (customer, delivery?, burger+, special)>
+<!ELEMENT order (customer, delivery?, burger+, special?)>
 
 <!-- A customer is identified simply by their name -->
 <!ELEMENT customer (#PCDATA)>
@@ -26,14 +26,14 @@ Burger customization...
 - special instructions
 - an optional name, should the customer wish to propose this as a menu item
 -->
-<!ELEMENT burger (patty, cheeses?, topping*, sauce*, instructions*, name?)>
-<!-- A patty can be one of 5 types (assume beef), and might be named explicitly -->
+<!ELEMENT burger (patty, cheeses?, topping*, sauce*, instructions?, name?)>
+<!-- A patty can be one of five types (assume beef), and might be named explicitly -->
 <!ELEMENT patty (#PCDATA)>
 <!ATTLIST patty
     type    (beef|pork|turkey|bison|vege) "beef"
 >
 
-<!-- The customer can order 2 cheeses. Let's assume that one might go on top
+<!-- The customer can order two cheeses. Let's assume that one might go on top
 and one on bottom, and provide for unique codes for these. -->
 <!ELEMENT cheeses EMPTY>
 <!ATTLIST cheeses
