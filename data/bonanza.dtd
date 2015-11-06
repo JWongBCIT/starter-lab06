@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- An order identifies the customer, order type, burgers, and anything special  -->
-<!ELEMENT order (customer, delivery?, burger+, special?)>
+<!ELEMENT order (customer, delivery?, burger+, special)>
 
 <!-- A customer is identified simply by their name -->
 <!ELEMENT customer (#PCDATA)>
